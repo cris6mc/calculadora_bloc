@@ -13,5 +13,16 @@ part of 'calculator_bloc.dart';
     this.operation = '+',
     });
 
+    CalculatorState copyWith({
+    String? result, 
+    String? firstNunmber, 
+    String? secondNumber, 
+    String? operation,
+    })=> CalculatorState(
+      firstNunmber: firstNunmber ?? this.firstNunmber,
+      secondNumber: secondNumber ?? this.secondNumber,
+      result: result ?? this.result,
+      operation: operation ?? this.operation,
+      );
 }
 
